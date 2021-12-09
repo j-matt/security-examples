@@ -1,0 +1,15 @@
+GET http://localhost:80/api/item?id=99
+Accept: application/json
+
+###
+GET http://localhost:8081/auth/realms/example/.well-known/openid-configuration
+Accept: application/json
+
+###
+
+
+POST http://localhost:8081/auth/realms/example/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password&client_id=clientId123&username=user&password=password
+
